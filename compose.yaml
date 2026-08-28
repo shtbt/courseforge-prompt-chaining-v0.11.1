@@ -1,0 +1,9 @@
+services:
+  courseforge:
+    build: .
+    env_file:
+      - .env
+    volumes:
+      # Keep generated files on the host even though the application runs
+      # inside an isolated container.
+      - ./output:/app/output
